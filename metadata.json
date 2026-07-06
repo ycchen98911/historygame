@@ -1,0 +1,6 @@
+{
+  "name": "台灣歷史事件排序遊戲",
+  "description": "一個精美的互動式台灣歷史事件排序小遊戲，玩家需要將隨機排列的歷史事件拖曳放置到正確的時間軸順序上。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
