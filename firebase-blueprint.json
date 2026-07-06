@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "A score entry on the Taiwan History Timeline game leaderboard",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the time traveler"
+        },
+        "time": {
+          "type": "integer",
+          "description": "Total seconds taken to complete the chronological event sorting"
+        },
+        "attempts": {
+          "type": "integer",
+          "description": "Number of validation attempts made"
+        },
+        "date": {
+          "type": "string",
+          "description": "Formatted date of completion"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp when the score was recorded"
+        }
+      },
+      "required": ["name", "time", "attempts", "date", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/leaderboard/{entryId}": {
+      "schema": "#/entities/LeaderboardEntry",
+      "description": "Stores high score entries for the historical timeline game"
+    }
+  }
+}
